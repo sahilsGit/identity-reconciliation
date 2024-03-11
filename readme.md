@@ -47,15 +47,19 @@ New records can be created by hitting a post request on `/identify` endpoint .
 }
 ```
 
-A `secondary` record / row be created if the payload brings in new information about an existing user.
+### Secondary Record
 
-    Either `email` or `phoneNumber` brought in should match with an existing contact while the other should.
+A `secondary` record will be created if the payload brings in new information about an existing user.
 
-    If `email` matches then `phoneNumber` shouldn't and vice versa.
+Either `email` or `phoneNumber` brought in **should match** with an existing contact while the **other shouldn't**.
 
-A `primary` record /row will be created when the payload is completely unique.
+If `email` matches then `phoneNumber` shouldn't and vice versa.
 
-    Neither `email` nor the `phoneNumber` should match to any of the existing records.
+### Primary Record
+
+A `primary` record will be created when the payload is completely unique.
+
+**Neither** `email` **nor** the `phoneNumber` should match with any of the existing records.
 
 ## Expected Response
 
