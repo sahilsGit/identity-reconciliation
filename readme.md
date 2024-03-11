@@ -62,14 +62,14 @@ A `primary` record /row will be created when the payload is completely unique.
 Whenever a user hits the endpoint following designated format, irrespective of what happens (New record is created or not) the user receives response in the following format.
 
 ```
-	{
-		"contact":{
-			"primaryContactId": number,
-			"emails": string[], // first element being email of primary contact
-			"phoneNumbers": string[], // first element being phoneNumber of primary contact
-			"secondaryContactIds": number[] // Array of all Contact IDs that are "secondary" to the primary contact
-		}
-	}
+{
+    "contact":{
+        "primaryContactId": number,
+        "emails": string[], // first element being email of primary contact
+        "phoneNumbers": string[], // first element being phoneNumber of primary contact
+        "secondaryContactIds": number[] // Array of all Contact IDs that are "secondary" to the primary contact
+    }
+}
 ```
 
 ## Demoting `primary` contacts to `secondary`
